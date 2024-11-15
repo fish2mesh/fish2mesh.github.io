@@ -87,12 +87,12 @@ const App = () => {
         </section>
 
 
-        <section id="acknowledgement" className="section">
+        {/* <section id="acknowledgement" className="section">
           <h2 className="title">Acknowledgement</h2>
           <p>Acknowledging contributions and collaborators</p>
-        </section>
+        </section> */}
 
-        <section id="citations" className="section">
+        {/* <section id="citations" className="section">
           <h2 className="title">Citation</h2>
           <div className="code-block">
             <pre>
@@ -101,7 +101,7 @@ const App = () => {
               </code>
             </pre>
           </div>
-        </section>
+        </section> */}
       </main>
     </div>
   );
