@@ -1,0 +1,259 @@
+/* App.css */
+body {
+  margin: 0;
+  font-family: "Assistant", sans-serif;
+  font-size: 24px;
+  font-weight: lighter;
+}
+
+
+.bullet-list {
+  padding-left: 11.5%;
+  padding-right: 10%;
+  text-align: justify;
+  list-style-type: disc;
+}
+
+.bullet-item {
+  margin-bottom: 5px;
+  text-align: justify;
+}
+
+.bullet-item strong {
+  display: block; /* Ensure the title is on a new line */
+  font-weight: bold;
+}
+
+
+.title {
+  font-size: 3rem;  /* Increased for visibility during debugging */
+  font-family: "Assistant", sans-serif;
+  color: black;      /* Pure black for high contrast */
+  text-align: center;
+  padding: 15px;  
+  margin: 0px;
+  font-weight: lighter;
+}
+
+.main-title {
+  font-weight: bold;
+  font-size: 3rem;  /* Increased for visibility during debugging */
+  font-family: "Assistant", sans-serif;
+  color: black;      /* Pure black for high contrast */
+  text-align: center;
+  padding: 15px;  
+  margin: 0px;
+}
+#results .title {  
+  margin: 0px;
+}
+
+#demos .title {  
+  margin: 0px;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.menu-button {
+  display: none;
+  font-size: 24px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-links li a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav-links li a:hover {
+  color: #ab89d5;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .menu-button {
+    display: block;
+    position: absolute;
+    left: 20px;
+    font-size: 24px;
+    color: black;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+.video-container {
+  width: 100%;
+  max-width: 1130px;
+  margin: 0 auto;
+}
+
+.icon-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.icon-link {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+main {
+  margin-top: 80px; /* Adjust to ensure content is not overlapped by navbar */
+}
+
+.section {
+  padding: 30px 20px;
+}
+
+
+/* Add debug styles to .title */
+
+
+
+.abstract-content, .overview-content {
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: justify;
+}
+
+.overview_img {
+  width: 100%;
+  max-width: 1130px;
+  margin: 0 auto;
+  display: block;
+}
+
+
+@media (min-width: 1600px) {
+  .abstract-content, .overview-content {
+    padding-left: 28%;
+    padding-right: 28%;
+  }
+  .bullet-list {
+    padding-left: 29%;
+    padding-right: 28%;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links li a {
+    font-size: 18px;
+  }
+
+  .abstract-content, .overview-content {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .bullet-list {
+    padding-left: 8.5%;
+    padding-right: 5%;
+  }
+
+  .section {
+    padding: 10px 10px;
+  }
+
+
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .title{
+    padding-top: 20px;
+  }
+
+  .main-title{
+    padding-top: 30px;
+    padding-bottom: 0px;
+  }
+
+  #abstract .title,
+#overview .title,
+#results .title,
+#demos .title,
+#acknowledgement .title,
+#citations .title {
+  padding-top: 60px;  
+  padding-bottom: 10px;
+  margin: 0px;
+}
+
+
+  .video-container {
+    width: 100%;
+    padding-bottom: 0px;
+  }
+
+  .iframe {
+    height: 220px;
+  }
+
+
+}
+
+

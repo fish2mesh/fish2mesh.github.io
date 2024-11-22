@@ -1,0 +1,53 @@
+/* Slide2 container styling */
+.slide2-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Media row styling */
+  .media-row {
+    display: flex;
+    gap: 20px; /* Even space between each item */
+  }
+  
+  /* Styling for images and video */
+  .media-box {
+    text-align: center;
+    flex: 1; /* Allows items to be evenly distributed */
+  }
+  
+  .slide2-image,
+  .slide2-video {
+    width: auto; /* Full width within each media box */
+    height: 210px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: contain; /* Maintains aspect ratio */
+  }
+  
+  /* Caption styling */
+  .caption {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Responsive layout for smaller screens */
+@media (max-width: 1420px) {
+    /* Change the layout to two items per row */
+    .media-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Two columns layout */
+      gap: 10px; /* Adjust gap for smaller screens */
+    }
+  
+    /* Adjust image and gif size */
+    .slide2-image {
+      width: 100%;
+      height: auto; /* Let height adjust based on aspect ratio */
+    }
+  }

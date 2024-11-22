@@ -1,0 +1,134 @@
+/* Slide container */
+.slide-container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Reset margin and padding for all elements inside */
+.slide-container * {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+/* Row 1 styles */
+.row-one {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.row-one .image-box {
+  text-align: center;
+  flex: 0 0 width;
+}
+
+.row-one .slide-image {
+  height: 150px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Row 2 styles */
+.row-two {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.row-two .image-box {
+  text-align: center;
+  flex: 0 0 width;
+}
+
+.row-two .slide-image {
+  height: 210px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Row 3 styles */
+.row-three {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.row-three .image-box {
+  text-align: center;
+  flex: 0 0 width;
+}
+
+.row-three .slide-image {
+  height: 210px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Caption styles (applied across all rows) */
+.caption {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+
+/* Responsive scaling for the entire slide */
+@media (max-width: 756px) {
+  .row-one, .row-two, .row-three{
+    gap: 30px;
+  }
+}
+
+@media (max-width: 756px) {
+  .slide-container {
+    max-width: 100%; /* Ensure it takes full width */
+    transform: scale(0.9); /* Further scale down on very small screens */
+  }
+}
+
+@media (max-width: 668px) {
+  .row-one, .row-two, .row-three{
+    gap: 20px;
+  }
+}
+
+@media (max-width: 648px) {
+  .slide-container {
+    max-width: 100%; /* Ensure it takes full width */
+    transform: scale(0.8); /* Further scale down on very small screens */
+  }
+}
+
+@media (max-width: 579px) {
+  .row-one, .row-two, .row-three{
+    gap: 10px;
+  }
+}
+
+@media (max-width: 562px) {
+  .slide-container {
+    max-width: 100%; /* Ensure it takes full width */
+    transform: scale(0.7); /* Further scale down on very small screens */
+  }
+}
+
+@media (max-width: 498px) {
+  .slide-container {
+    max-width: 100%; /* Ensure it takes full width */
+    transform: scale(0.6); /* Further scale down on very small screens */
+  }
+}
+
+@media (max-width: 412px) {
+  .slide-container {
+    max-width: 100%; /* Ensure it takes full width */
+    transform: scale(0.5); /* Further scale down on very small screens */
+  }
+}
