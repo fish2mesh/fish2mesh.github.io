@@ -36,14 +36,115 @@ body {
 }
 
 .main-title {
-  font-weight: bold;
-  font-size: 3rem;  /* Increased for visibility during debugging */
+  font-weight: 500;
+  font-size: 45px;  /* Increased for visibility during debugging */
   font-family: "Assistant", sans-serif;
   color: black;      /* Pure black for high contrast */
   text-align: center;
-  padding: 15px;  
+  padding: 0px; /* Reduced top and bottom padding */
   margin: 0px;
+  margin-bottom: -15px; /* Increased negative margin to bring subtitle closer */
 }
+
+.subtitle {
+  font-size: 3rem;
+  font-family: "Assistant", sans-serif;
+  color: black;
+  text-align: center;
+  padding: 0px; /* Reduced bottom padding from 20px to 10px */
+  margin: 0px;
+  font-weight: 300;
+}
+
+/* Authors Section */
+.authors-section {
+  text-align: center;
+  margin: -5px 0 0px 0;
+  padding: 5px;
+}  
+
+.authors {
+  margin-bottom: 0px;
+}
+
+.author {
+  display: inline-block;
+  margin: 0px 7px 0px 5px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #2563eb;
+}
+
+.author sup {
+  font-size: 0.8rem;
+  margin-left: 2px;
+}
+
+.affiliations {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.affiliation {
+  font-size: 1.8rem;
+  color: #666;
+  font-style: italic;
+}
+
+.affiliation sup {
+  font-size: 0.8rem;
+  margin-right: 3px;
+}
+
+/* Resource Buttons */
+.resource-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 0px;
+  padding: 12px;
+  padding-bottom: 30px;
+}
+
+.resource-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  min-width: 100px;
+  height: 45px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.resource-btn:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  filter: invert(1);
+}
+
+.btn-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #results .title {  
   margin: 0px;
 }
@@ -161,11 +262,17 @@ body {
 }
 
 main {
-  margin-top: 80px; /* Adjust to ensure content is not overlapped by navbar */
+  margin-top: 40px;
+}
+
+/* Fix scroll navigation to prevent content hiding under navbar */
+html {
+  scroll-padding-top: 20px; /* Accounts for navbar height + buffer */
 }
 
 .section {
-  padding: 30px 20px;
+  padding: 20px 20px; /* Reduced from 30px to tighten spacing */
+  scroll-margin-top: 20px; /* Ensures proper scroll positioning for anchor links */
 }
 
 
@@ -187,6 +294,46 @@ main {
 }
 
 
+/* Tablet styles */
+@media (max-width: 1024px) and (min-width: 481px) {
+  .main-title {
+    font-size: 3.5rem;
+    padding: 8px 15px 4px 15px;
+    margin-bottom: -12px;
+  }
+
+  .subtitle {
+    font-size: 2.2rem;
+    padding: 5px 15px 0px 15px; /* Match the 0px bottom padding */
+  }
+
+  .authors-section {
+    padding: 0 8%;
+    margin: -3px 0 18px 0; /* Negative margin to bring authors closer */
+  }
+
+  .author {
+    font-size: 1.1rem;
+    margin: 0 10px 8px 10px;
+  }
+
+  .resource-buttons {
+    padding: 0 8%;
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .resource-btn {
+    padding: 11px 18px;
+    font-size: 15px;
+    height: 42px;
+  }
+
+  .section {
+    padding: 15px 20px;
+  }
+}
+
 @media (min-width: 1600px) {
   .abstract-content, .overview-content {
     padding-left: 28%;
@@ -195,6 +342,14 @@ main {
   .bullet-list {
     padding-left: 29%;
     padding-right: 28%;
+  }
+  
+  .authors-section {
+    padding: 0 25%;
+  }
+  
+  .resource-buttons {
+    padding: 0 25%;
   }
 }
 
@@ -214,35 +369,89 @@ main {
   }
 
   .section {
-    padding: 10px 10px;
+    padding: 8px 10px; /* Reduced from 10px to maintain tight spacing */
+    scroll-margin-top: 80px; /* Slightly more offset for mobile navbar */
   }
 
+  /* Adjust scroll padding for mobile */
+  html {
+    scroll-padding-top: 80px;
+  }
 
   .icon {
     width: 25px;
     height: 25px;
   }
 
+  /* Mobile styles for titles */
+  .main-title {
+    font-size: 2.5rem;
+    padding: 5px 10px 2px 10px; /* Reduced padding */
+    margin-bottom: -8px; /* Tighter spacing */
+  }
+
+  .subtitle {
+    font-size: 1.8rem;
+    padding: 3px 10px 0px 10px; /* Match the 0px bottom padding */
+  }
+
+  /* Mobile styles for authors */
+  .authors-section {
+    padding: 0 5%;
+    margin: -3px 0 15px 0; /* Negative margin to bring authors much closer */
+  }
+
+  .author {
+    display: block;
+    margin: 5px 0;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .affiliations {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .affiliation {
+    font-size: 0.9rem;
+  }
+
+  /* Mobile styles for resource buttons */
+  .resource-buttons {
+    padding: 0 5%;
+    gap: 10px;
+    margin: 15px 0; /* Reduced from 20px */
+  }
+
+  .resource-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    min-width: 80px;
+    height: 40px;
+  }
+
+  .btn-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+  }
+
   .title{
-    padding-top: 20px;
+    padding-top: 15px; /* Reduced from 20px */
   }
 
-  .main-title{
-    padding-top: 30px;
-    padding-bottom: 0px;
-  }
-
-  #abstract .title,
+#abstract .title,
 #overview .title,
 #results .title,
 #demos .title,
 #acknowledgement .title,
 #citations .title {
-  padding-top: 60px;  
+  padding-top: 40px; /* Reduced from 60px */
   padding-bottom: 10px;
   margin: 0px;
 }
-
 
   .video-container {
     width: 100%;
@@ -252,8 +461,229 @@ main {
   .iframe {
     height: 220px;
   }
+}
 
+/* Results Table Styles */
+.table-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
+.table-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Assistant", sans-serif;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  border: 1px solid #e5e7eb;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Assistant", sans-serif;
+  font-size: 16px;
+}
+
+.results-table thead th {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  color: #374151;
+  font-weight: 600;
+  padding: 16px 12px;
+  text-align: left;
+  border-bottom: 2px solid #e5e7eb;
+  font-size: 15px;
+  letter-spacing: 0.025em;
+}
+
+.results-table tbody td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #f3f4f6;
+  color: #4b5563;
+  font-size: 15px;
+  vertical-align: middle;
+}
+
+.results-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.results-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.highlight-row {
+  background-color: #f0f9ff !important;
+}
+
+.highlight-row:hover {
+  background-color: #e0f2fe !important;
+}
+
+.results-table td:first-child {
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.results-table td:not(:first-child) {
+  text-align: center;
+}
+
+.results-table th:not(:first-child) {
+  text-align: center;
+}
+
+/* Dataset group separation */
+.results-table tbody tr:nth-child(4n+1):not(:first-child) {
+  border-top: 3px solid #d1d5db;
+}
+
+.results-table tbody tr:nth-child(4n+1):not(:first-child) td {
+  padding-top: 24px;
+}
+
+.results-table tbody tr:nth-child(4n):not(:last-child) td {
+  padding-bottom: 20px;
+}
+
+/* Add subtle background alternation for dataset groups */
+.results-table tbody tr:nth-child(8n+5),
+.results-table tbody tr:nth-child(8n+6),
+.results-table tbody tr:nth-child(8n+7),
+.results-table tbody tr:nth-child(8n+8) {
+  background-color: #f8fafc;
+}
+
+.results-table tbody tr:nth-child(8n+5):hover,
+.results-table tbody tr:nth-child(8n+6):hover,
+.results-table tbody tr:nth-child(8n+7):hover,
+.results-table tbody tr:nth-child(8n+8):hover {
+  background-color: #f1f5f9;
+}
+
+/* Keep highlight rows prominent */
+.results-table tbody tr.highlight-row:nth-child(8n+5),
+.results-table tbody tr.highlight-row:nth-child(8n+6),
+.results-table tbody tr.highlight-row:nth-child(8n+7),
+.results-table tbody tr.highlight-row:nth-child(8n+8) {
+  background-color: #f0f9ff !important;
+}
+
+/* Responsive styles for tables */
+@media (max-width: 1024px) and (min-width: 481px) {
+  .table-container {
+    padding: 0 15px;
+  }
+  
+  .table-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  .results-table {
+    font-size: 14px;
+  }
+  
+  .results-table thead th {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+  
+  .results-table tbody td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table-container {
+    padding: 0 10px;
+  }
+  
+  .table-title {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+  
+  .table-wrapper {
+    border-radius: 8px;
+  }
+  
+  .results-table {
+    font-size: 12px;
+  }
+  
+  .results-table thead th {
+    padding: 10px 8px;
+    font-size: 11px;
+  }
+  
+  .results-table tbody td {
+    padding: 8px 6px;
+    font-size: 11px;
+  }
+}
+
+/* BibTeX Code Block Styles */
+.code-block {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.code-block pre {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  overflow-x: auto;
+}
+
+.code-block code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Responsive styles for BibTeX */
+@media (max-width: 1024px) and (min-width: 481px) {
+  .code-block {
+    margin: 15px 20px;
+    padding: 15px;
+  }
+  
+  .code-block pre,
+  .code-block code {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .code-block {
+    margin: 10px 10px;
+    padding: 12px;
+    border-radius: 6px;
+  }
+  
+  .code-block pre,
+  .code-block code {
+    font-size: 12px;
+    line-height: 1.4;
+  }
 }
 
 
