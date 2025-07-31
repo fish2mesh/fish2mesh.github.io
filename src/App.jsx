@@ -13,6 +13,9 @@ import EmblaCarousel from './carousel/js/EmblaCarousel';
 import EmblaCarousel2 from './carousel/js/EmblaCarousel2';
 
 import overviewImage from './assets/frame.svg';
+import newoverviewImage from './assets/newframe.png';
+
+
 
 // Carousel settings
 const OPTIONS = {dragFree: true, loop: true};
@@ -32,6 +35,11 @@ const App = () => {
         <section id="about" className="section">
           <h2 className="main-title">Fish2Mesh Transformer:</h2>
           <h2 className="subtitle">3D Human Mesh Reconstruction from Egocentric Vision</h2>
+
+          {/* Conference Information */}
+          <div className="conference-info">
+            <h3 className="conference-text">ICCV 2025</h3>
+          </div>
 
           {/* Author Names - Commented out for now
           <div className="authors-section">
@@ -84,7 +92,7 @@ const App = () => {
 
           {/* Video Embed */}
           <div className="video-container">
-            <div style={{padding:"56.25% 0 0 0", position:"relative"}}>
+            <div style={{padding:"42% 0 0 0", position:"relative"}}>
               <iframe 
                 src="https://player.vimeo.com/video/1105318531?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1" 
                 frameBorder="0" 
@@ -106,7 +114,7 @@ const App = () => {
           <h2 className="title">Summary</h2>
           <div className="overview_img">
             <img
-              src={overviewImage}
+              src={newoverviewImage}
               alt="Overview Illustration"
               style={{ width: '100%', height: 'auto', marginBottom: '10px' }}
             />
@@ -310,7 +318,7 @@ const App = () => {
           </div>
         </section>
 
-        <section id="citation" className="section">
+        {/* <section id="citation" className="section">
           <h2 className="title">BibTeX</h2>
           <div className="code-block">
             <pre>
@@ -324,7 +332,7 @@ const App = () => {
               </code>
             </pre>
           </div>
-        </section>
+        </section> */}
 
         
 

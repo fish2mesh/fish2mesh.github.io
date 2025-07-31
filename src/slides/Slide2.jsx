@@ -7,7 +7,7 @@ const Slide2 = ({ slideNumber }) => {
   const media = {
     image1: require(`../assets/slide${slideNumber}/egocentric.png`),
     image2: require(`../assets/slide${slideNumber}/thirdpersonview.png`),
-    image3: require(`../assets/slide${slideNumber}/gt.png`),
+    image3: require(`../assets/slide${slideNumber}/fish2mesh.png`),
     gif: require(`../assets/slide${slideNumber}/video.gif`), // Ensure video is in the correct format and path
 
     normalGif: require(`../assets/slide${slideNumber}/video.gif`),

@@ -48,7 +48,7 @@
   gap: 1.2rem;
   padding-left: 25%;
   padding-right: 25%;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 .embla__buttons {
   display: grid;
@@ -129,9 +129,12 @@
   .embla__controls {
     padding-left: 12%;
     padding-right: 12%;
+    padding-bottom: 40px; /* Increased bottom padding to prevent overlap */
+    margin-bottom: 20px; /* Additional margin for extra spacing */
   }
   .embla {
     height: 500px; /* Auto height in responsive mode */
+    margin-bottom: 30px; /* Add margin to the entire carousel container */
   }
 }
 
@@ -139,5 +142,10 @@
   /* Control embla height in responsive view */
   .embla {
     height: 400px; /* Auto height in responsive mode */
+    margin-bottom: 40px; /* Increased margin for mobile */
+  }
+  .embla__controls {
+    padding-bottom: 50px; /* More padding for mobile to prevent overlap */
+    margin-bottom: 25px; /* Additional margin for mobile */
   }
 }

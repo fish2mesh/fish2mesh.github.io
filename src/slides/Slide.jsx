@@ -51,7 +51,7 @@ const Slide = ({ slideNumber }) => {
         </div>
         <div className="image-box">
           <img src={images.fishvit} alt="Egohmr" className="slide-image" />
-          <p className="caption">FishViT</p>
+          <p className="caption">FisheyeViT</p>
         </div>
       </div>
     </div>
